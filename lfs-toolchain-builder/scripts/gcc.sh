@@ -1,10 +1,10 @@
 #!/bin/bash
-# 5.5. GCC-10.2.0 - Pass 1
+# 5.5. GCC-12.2.0 - Pass 1
 set -e
 cd $LFS/sources
-rm -rf gcc-10.2.0
-tar xf gcc-10.2.0.tar.xz
-cd gcc-10.2.0
+rm -rf gcc-12.2.0
+tar xf gcc-12.2.0.tar.xz
+cd gcc-12.2.0
 
 tar -xf ../mpfr-4.1.0.tar.xz
 mv -v mpfr-4.1.0 mpfr
@@ -58,4 +58,4 @@ make
 make install
 
 cd $LFS/sources
-rm -rf gcc-10.2.0
+rm -rf gcc-12.2.0

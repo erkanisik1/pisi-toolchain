@@ -1,10 +1,10 @@
 #!/bin/bash
-# 5.10. GCC-10.2.0 - Pass 2
+# 5.10. GCC-12.2.0 - Pass 2
 set -e
 cd $LFS/sources
-rm -rf gcc-10.2.0
-tar xf gcc-10.2.0.tar.xz
-cd gcc-10.2.0
+rm -rf gcc-12.2.0
+tar xf gcc-12.2.0.tar.xz
+cd gcc-12.2.0
 
 cat gcc/limitx.h gcc/glimits.h gcc/limity.h > \
   `dirname $($LFS_TGT-gcc -print-libgcc-file-name)`/include-fixed/limits.h
@@ -52,4 +52,4 @@ make install
 ln -sv gcc /tools/bin/cc
 
 cd $LFS/sources
-rm -rf gcc-10.2.0
+rm -rf gcc-12.2.0
